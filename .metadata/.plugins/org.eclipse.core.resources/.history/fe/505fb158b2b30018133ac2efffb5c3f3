@@ -1,0 +1,11 @@
+
+public class Dog {
+	public Dog(String name, int age) {
+		
+	}
+	
+	public static void main(String[] args) {
+		final Dog dog = new Dog("tommmy", 19);
+		System.out.println(dog);
+	}
+}

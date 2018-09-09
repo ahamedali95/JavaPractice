@@ -1,0 +1,15 @@
+
+public class Dog {
+	String name;
+	int age;
+	
+	public Dog(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+	
+	public static void main(String[] args) {
+		final Dog dog = new Dog("tommy", 19);
+		System.out.println(dog.name);
+	}
+}
