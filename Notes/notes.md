@@ -165,16 +165,178 @@ public class LocalVariable {
 }
 ```
 
-### Data Types 
+### Data Types
 
-Data type defines the a variable can take, for example if a variable has int data 
-type, it can only take integer values. 
+Data type defines the a variable can take, for example if a variable has int data
+type, it can only take integer values.
+
+In java we have two categories of data type:
+	1. Primitive data types
+	2. Non-primitive data types
 
 ![types is javascript an untyped language stack overflow](https://user-images.githubusercontent.com/24445922/46249640-82e3af00-c3fa-11e8-84ef-1a4ccf8a593f.png)
 
-	
-	
-	
-	
-	
-	
+Since Java is a statically typed language, any variables we declare must known
+its data type. Here unlike JS, value data type is less enforced.
+
+##### Primitive Data Types
+
+**byte**: This can hold whole number between ```-128``` and ```127```. Mostly
+used to save memory.
+
+**short**: This is greater than byte in terms of size and less than integer. Its range is ```-32,768``` to ```32,767```.
+
+**int**: This is used when short is not large enough to hold the numbers.
+It range is ```-2,147,483,648``` to ```2,147,483,647```
+
+**long**: Used when int is not large enough to hold the value, it has wider range than int data type, ranging from ```-9,223,372,036,854,775,808``` to ```9,223,372,036,854,775,807```.
+
+**float**: This is used to hold 6 to 7 decimal digits.
+
+**double**: This is used to hold 15 decimal digits.
+
+**boolean**: This is used to hold true of false.
+
+### Types of Operators
+
+##### Basic Arithmetic Operators
+
+1. ```+``` is for addition.
+
+2. ```–``` is for subtraction.
+
+3. ```*``` is for multiplication.
+
+4. ```/``` is for division.
+
+5. ```%``` is for modulo.
+
+##### Assignment Operators
+
+1. num2 = num1 would assign value of variable num1 to the variable.
+
+2. num2+=num1 is equal to num2 = num2+num1
+
+3. num2-=num1 is equal to num2 = num2-num1
+
+4. num2*=num1 is equal to num2 = num2*num1
+
+5. num2/=num1 is equal to num2 = num2/num1
+
+6. num2%=num1 is equal to num2 = num2%num1
+
+##### Auto-increment and Auto-decrement Operators
+
+1. num++ is equivalent to num=num+1;
+
+2. num–- is equivalent to num=num-1;
+
+##### Logical Operators
+
+1. ||
+
+2. &&
+
+3. !!
+
+##### Comparison Operators
+
+1. ==
+
+2. ```>=```
+
+3. <=
+
+4. ```>```
+
+5. <
+
+6. !=
+
+##### Ternary Operator
+
+**variable num1 = (expression) ? value if true : value if false**
+
+### Java Control Statements
+
+##### If-else
+
+```java
+if(condition){
+  Statement(s);
+} else if(condition) {
+	Statement(p);
+} else {
+	Statement(z);
+}
+```
+
+##### Switch-Case
+
+```java
+switch (variable or an integer expression)
+{
+   case constant:
+   //Java code
+   ;
+   case constant:
+   //Java code
+   ;
+   default:
+   //Java code
+   ;
+}
+```
+
+We do need ```break``` statement if we are not returning something from the
+switch statement.
+
+
+```java
+switch (variable or an integer expression)
+{
+   case constant:
+   //Java code
+	 break
+   ;
+   case constant:
+   //Java code
+	 break
+   ;
+   default:
+   //Java code
+	 break
+   ;
+}
+```
+
+##### For-loop construct
+
+```java
+int arr = {1,2,3};
+
+for(int i = 0; i < arr.length; i++)
+{
+   System.out.println(arr[i]);
+}
+```
+
+##### Enhanced For-loop construct
+
+```java
+int arr = {1,2,3};
+
+for(int num : arr)
+{
+   System.out.println(num);
+}
+```
+
+** Please note that we cannot dynamically add elements to the above array, we
+need to use something called ```ArrayList```. ***
+
+```java
+while(condition)
+{
+   statement(s);
+}

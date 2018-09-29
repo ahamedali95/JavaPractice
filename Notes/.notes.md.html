@@ -767,6 +767,125 @@ input and outputs java bytecode.
 </div> 
 <h3> <a id="data-types" class="anchor" href="#data-types" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data Types</h3> 
 <p>Data type defines the a variable can take, for example if a variable has int data type, it can only take integer values.</p> 
-<p><a href="https://user-images.githubusercontent.com/24445922/46249640-82e3af00-c3fa-11e8-84ef-1a4ccf8a593f.png" target="_blank" rel="nofollow"><img src="https://user-images.githubusercontent.com/24445922/46249640-82e3af00-c3fa-11e8-84ef-1a4ccf8a593f.png" alt="types is javascript an untyped language stack overflow" style="max-width:100%;" /></a></p>
+<p>In java we have two categories of data type: 1. Primitive data types 2. Non-primitive data types</p> 
+<p><a href="https://user-images.githubusercontent.com/24445922/46249640-82e3af00-c3fa-11e8-84ef-1a4ccf8a593f.png" target="_blank" rel="nofollow"><img src="https://user-images.githubusercontent.com/24445922/46249640-82e3af00-c3fa-11e8-84ef-1a4ccf8a593f.png" alt="types is javascript an untyped language stack overflow" style="max-width:100%;" /></a></p> 
+<p>Since Java is a statically typed language, any variables we declare must known its data type. Here unlike JS, value data type is less enforced.</p> 
+<h5> <a id="primitive-data-types" class="anchor" href="#primitive-data-types" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Primitive Data Types</h5> 
+<p><strong>byte</strong>: This can hold whole number between <code>-128</code> and <code>127</code>. Mostly used to save memory.</p> 
+<p><strong>short</strong>: This is greater than byte in terms of size and less than integer. Its range is <code>-32,768</code> to <code>32,767</code>.</p> 
+<p><strong>int</strong>: This is used when short is not large enough to hold the numbers. It range is <code>-2,147,483,648</code> to <code>2,147,483,647</code></p> 
+<p><strong>long</strong>: Used when int is not large enough to hold the value, it has wider range than int data type, ranging from <code>-9,223,372,036,854,775,808</code> to <code>9,223,372,036,854,775,807</code>.</p> 
+<p><strong>float</strong>: This is used to hold 6 to 7 decimal digits.</p> 
+<p><strong>double</strong>: This is used to hold 15 decimal digits.</p> 
+<p><strong>boolean</strong>: This is used to hold true of false.</p> 
+<h3> <a id="types-of-operators" class="anchor" href="#types-of-operators" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Types of Operators</h3> 
+<h5> <a id="basic-arithmetic-operators" class="anchor" href="#basic-arithmetic-operators" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Basic Arithmetic Operators</h5> 
+<ol> 
+ <li> <p><code>+</code> is for addition.</p> </li> 
+ <li> <p><code>–</code> is for subtraction.</p> </li> 
+ <li> <p><code>*</code> is for multiplication.</p> </li> 
+ <li> <p><code>/</code> is for division.</p> </li> 
+ <li> <p><code>%</code> is for modulo.</p> </li> 
+</ol> 
+<h5> <a id="assignment-operators" class="anchor" href="#assignment-operators" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Assignment Operators</h5> 
+<ol> 
+ <li> <p>num2 = num1 would assign value of variable num1 to the variable.</p> </li> 
+ <li> <p>num2+=num1 is equal to num2 = num2+num1</p> </li> 
+ <li> <p>num2-=num1 is equal to num2 = num2-num1</p> </li> 
+ <li> <p>num2*=num1 is equal to num2 = num2*num1</p> </li> 
+ <li> <p>num2/=num1 is equal to num2 = num2/num1</p> </li> 
+ <li> <p>num2%=num1 is equal to num2 = num2%num1</p> </li> 
+</ol> 
+<h5> <a id="auto-increment-and-auto-decrement-operators" class="anchor" href="#auto-increment-and-auto-decrement-operators" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Auto-increment and Auto-decrement Operators</h5> 
+<ol> 
+ <li> <p>num++ is equivalent to num=num+1;</p> </li> 
+ <li> <p>num–- is equivalent to num=num-1;</p> </li> 
+</ol> 
+<h5> <a id="logical-operators" class="anchor" href="#logical-operators" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Logical Operators</h5> 
+<ol> 
+ <li> <p>||</p> </li> 
+ <li> <p>&amp;&amp;</p> </li> 
+ <li> <p>!!</p> </li> 
+</ol> 
+<h5> <a id="comparison-operators" class="anchor" href="#comparison-operators" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Comparison Operators</h5> 
+<ol> 
+ <li> <p>==</p> </li> 
+ <li> <p><code>&gt;=</code></p> </li> 
+ <li> <p>&lt;=</p> </li> 
+ <li> <p><code>&gt;</code></p> </li> 
+ <li> <p>&lt;</p> </li> 
+ <li> <p>!=</p> </li> 
+</ol> 
+<h5> <a id="ternary-operator" class="anchor" href="#ternary-operator" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Ternary Operator</h5> 
+<p><strong>variable num1 = (expression) ? value if true : value if false</strong></p> 
+<h3> <a id="java-control-statements" class="anchor" href="#java-control-statements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Java Control Statements</h3> 
+<h5> <a id="if-else" class="anchor" href="#if-else" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>If-else</h5> 
+<div class="highlight highlight-source-java">
+ <pre><span class="pl-k">if</span>(condition){
+  Statement(s);
+} <span class="pl-k">else</span> <span class="pl-k">if</span>(condition) {
+	Statement(p);
+} <span class="pl-k">else</span> {
+	Statement(z);
+}</pre>
+</div> 
+<h5> <a id="switch-case" class="anchor" href="#switch-case" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Switch-Case</h5> 
+<div class="highlight highlight-source-java">
+ <pre><span class="pl-k">switch</span> (variable or an integer expression)
+{
+   <span class="pl-k">case</span> constant<span class="pl-k">:</span>
+   <span class="pl-c"><span class="pl-c">//</span>Java code</span>
+   ;
+   <span class="pl-k">case</span> constant<span class="pl-k">:</span>
+   <span class="pl-c"><span class="pl-c">//</span>Java code</span>
+   ;
+   <span class="pl-k">default</span><span class="pl-k">:</span>
+   <span class="pl-c"><span class="pl-c">//</span>Java code</span>
+   ;
+}</pre>
+</div> 
+<p>We do need <code>break</code> statement if we are not returning something from the switch statement.</p> 
+<div class="highlight highlight-source-java">
+ <pre><span class="pl-k">switch</span> (variable or an integer expression)
+{
+   <span class="pl-k">case</span> constant<span class="pl-k">:</span>
+   <span class="pl-c"><span class="pl-c">//</span>Java code</span>
+	 <span class="pl-k">break</span>
+   ;
+   <span class="pl-k">case</span> constant<span class="pl-k">:</span>
+   <span class="pl-c"><span class="pl-c">//</span>Java code</span>
+	 <span class="pl-k">break</span>
+   ;
+   <span class="pl-k">default</span><span class="pl-k">:</span>
+   <span class="pl-c"><span class="pl-c">//</span>Java code</span>
+	 <span class="pl-k">break</span>
+   ;
+}</pre>
+</div> 
+<h5> <a id="for-loop-construct" class="anchor" href="#for-loop-construct" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>For-loop construct</h5> 
+<div class="highlight highlight-source-java">
+ <pre><span class="pl-k">int</span> arr <span class="pl-k">=</span> {<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>};
+
+<span class="pl-k">for</span>(<span class="pl-k">int</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> arr<span class="pl-k">.</span>length; i<span class="pl-k">++</span>)
+{
+   <span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(arr[i]);
+}</pre>
+</div> 
+<h5> <a id="enhanced-for-loop-construct" class="anchor" href="#enhanced-for-loop-construct" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Enhanced For-loop construct</h5> 
+<div class="highlight highlight-source-java">
+ <pre><span class="pl-k">int</span> arr <span class="pl-k">=</span> {<span class="pl-c1">1</span>,<span class="pl-c1">2</span>,<span class="pl-c1">3</span>};
+
+<span class="pl-k">for</span>(<span class="pl-k">int</span> num <span class="pl-k">:</span> arr)
+{
+   <span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(num);
+}</pre>
+</div> 
+<p>** Please note that we cannot dynamically add elements to the above array, we need to use something called <code>ArrayList</code>. ***</p> 
+<div class="highlight highlight-source-java">
+ <pre><span class="pl-k">while</span>(condition)
+{
+   statement(s);
+}</pre>
+</div>
 </body>
 </html>
