@@ -677,6 +677,96 @@ input and outputs java bytecode.
 <p><strong>static</strong>: We do not need to create object for static methods to run. They can run itself.</p> 
 <p><strong>void</strong>: It does not return anything</p> 
 <p><strong>main</strong>: It is the method name that serves as an entry point from which JVM can run the Java program.</p> 
-<p><strong>String[] args</strong>: Used for command line arguments that are passed as strings</p>
+<p><strong>String[] args</strong>: Used for command line arguments that are passed as strings</p> 
+<h3> <a id="variables" class="anchor" href="#variables" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Variables</h3> 
+<p>To declare a variable in Java, we follow this syntax:</p> 
+<div class="highlight highlight-source-java">
+ <pre>data_type variable_name <span class="pl-k">=</span> value</pre>
+</div> 
+<h4> <a id="types-of-variables" class="anchor" href="#types-of-variables" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Types of Variables</h4> 
+<h5> <a id="static-or-class-variable" class="anchor" href="#static-or-class-variable" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Static (or class) Variable</h5> 
+<p>Static variables are also known as class variable because they are associated with the class and common for all the instances of class.</p> 
+<div class="highlight highlight-source-java">
+ <pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">InstanceVariable</span> {
+	<span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-smi">String</span> myClassVar <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>class variable or static variable<span class="pl-pds">&quot;</span></span>;
+
+	<span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">void</span> <span class="pl-en">main</span>(<span class="pl-k">String</span>[] <span class="pl-v">args</span>) {
+		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(<span class="pl-smi">InstanceVariable</span><span class="pl-k">.</span>myClassVar);
+		<span class="pl-c"><span class="pl-c">//</span>&quot;class variable or static variable&quot;</span>
+
+		<span class="pl-smi">InstanceVariable</span> obj1 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">InstanceVariable</span>();
+		<span class="pl-smi">InstanceVariable</span> obj2 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">InstanceVariable</span>();
+		<span class="pl-smi">InstanceVariable</span> obj3 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">InstanceVariable</span>();
+
+		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(obj1<span class="pl-k">.</span>myClassVar);
+		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(obj2<span class="pl-k">.</span>myClassVar);
+		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(obj3<span class="pl-k">.</span>myClassVar);
+		<span class="pl-c"><span class="pl-c">//</span>&quot;class variable or static variable&quot;</span>
+		<span class="pl-c"><span class="pl-c">//</span>&quot;class variable or static variable&quot;</span>
+		<span class="pl-c"><span class="pl-c">//</span>&quot;class variable or static variable&quot;</span>
+
+		obj1<span class="pl-k">.</span>myClassVar <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Changed text<span class="pl-pds">&quot;</span></span>;
+
+		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(obj1<span class="pl-k">.</span>myClassVar);
+		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(obj2<span class="pl-k">.</span>myClassVar);
+		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(obj3<span class="pl-k">.</span>myClassVar);
+		<span class="pl-c"><span class="pl-c">//</span>&quot;Changed text&quot;</span>
+		<span class="pl-c"><span class="pl-c">//</span>&quot;Changed text&quot;</span>
+		<span class="pl-c"><span class="pl-c">//</span>&quot;Changed text&quot;</span>
+	}
+}</pre>
+</div> 
+<h5> <a id="instance-variable" class="anchor" href="#instance-variable" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Instance Variable</h5> 
+<p>Instance Variables is associated with an instance of a class rather than the class itself. So that means the class does not have access to the instance variable and changing an instance variable does not affect the instance variable of another instance.</p> 
+<div class="highlight highlight-source-java">
+ <pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">InstanceVariable</span> {
+	<span class="pl-smi">String</span> myInstanceVar <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Instance variable<span class="pl-pds">&quot;</span></span>;
+
+	<span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">void</span> <span class="pl-en">main</span>(<span class="pl-k">String</span>[] <span class="pl-v">args</span>) {
+		<span class="pl-smi">InstanceVariable</span> obj1 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">InstanceVariable</span>();
+		<span class="pl-smi">InstanceVariable</span> obj2 <span class="pl-k">=</span> <span class="pl-k">new</span>  <span class="pl-smi">InstanceVariable</span>();
+		<span class="pl-smi">InstanceVariable</span> obj3 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">InstanceVariable</span>();
+
+		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(obj1<span class="pl-k">.</span>myInstanceVar);
+		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(obj2<span class="pl-k">.</span>myInstanceVar);
+		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(obj3<span class="pl-k">.</span>myInstanceVar);
+		<span class="pl-c"><span class="pl-c">//</span>&quot;Instance variable&quot;</span>
+		<span class="pl-c"><span class="pl-c">//</span>&quot;Instance variable&quot;</span>
+		<span class="pl-c"><span class="pl-c">//</span>&quot;Instance variable&quot;</span>
+
+		obj1<span class="pl-k">.</span>myInstanceVar <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Changed text<span class="pl-pds">&quot;</span></span>;
+
+		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(obj1<span class="pl-k">.</span>myInstanceVar);
+		<span class="pl-c"><span class="pl-c">//</span>&quot;Changed text&quot;</span>
+		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(obj2<span class="pl-k">.</span>myInstanceVar);
+		<span class="pl-c"><span class="pl-c">//</span>&quot;Instance variable&quot;</span>
+		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(obj3<span class="pl-k">.</span>myInstanceVar);
+		<span class="pl-c"><span class="pl-c">//</span>&quot;Instance variable&quot;</span>
+	}
+}</pre>
+</div> 
+<h5> <a id="local-variable" class="anchor" href="#local-variable" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Local Variable</h5> 
+<p>Local Variable is a variable that is only accessible inside the method.</p> 
+<div class="highlight highlight-source-java">
+ <pre><span class="pl-k">public</span> <span class="pl-k">class</span> <span class="pl-en">LocalVariable</span> {
+	<span class="pl-k">public</span> <span class="pl-smi">String</span> myVar <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Instance variable<span class="pl-pds">&quot;</span></span>;
+
+	<span class="pl-k">public</span> <span class="pl-k">void</span> <span class="pl-en">myMethod</span>() {
+		<span class="pl-smi">String</span> myVar <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>Inside Method<span class="pl-pds">&quot;</span></span>;
+		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(myVar);
+	}
+
+	<span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">void</span> <span class="pl-en">main</span>(<span class="pl-k">String</span>[] <span class="pl-v">args</span>) {
+		<span class="pl-smi">LocalVariable</span> obj1 <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-smi">LocalVariable</span>();
+		<span class="pl-smi">System</span><span class="pl-k">.</span>out<span class="pl-k">.</span>println(obj1<span class="pl-k">.</span>myVar);
+		<span class="pl-c"><span class="pl-c">//</span>&quot;Instance variable&quot;</span>
+		obj1<span class="pl-k">.</span>myMethod();
+		<span class="pl-c"><span class="pl-c">//</span>&quot;Inside Method&quot;</span>
+	}
+}</pre>
+</div> 
+<h3> <a id="data-types" class="anchor" href="#data-types" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Data Types</h3> 
+<p>Data type defines the a variable can take, for example if a variable has int data type, it can only take integer values.</p> 
+<p><a href="https://user-images.githubusercontent.com/24445922/46249640-82e3af00-c3fa-11e8-84ef-1a4ccf8a593f.png" target="_blank" rel="nofollow"><img src="https://user-images.githubusercontent.com/24445922/46249640-82e3af00-c3fa-11e8-84ef-1a4ccf8a593f.png" alt="types is javascript an untyped language stack overflow" style="max-width:100%;" /></a></p>
 </body>
 </html>

@@ -60,10 +60,117 @@ run itself.
 **main**: It is the method name that serves as an entry point from which JVM
 can run the Java program.
 
-**String[] args**: Used for command line arguments that are passed as strings 
+**String[] args**: Used for command line arguments that are passed as strings
 
-	
-	
+### Variables
+
+To declare a variable in Java, we follow this syntax:
+
+```java
+data_type variable_name = value
+```
+
+#### Types of Variables
+
+##### Static (or class) Variable
+
+Static variables are also known as class variable because they are associated with the class and common for all the instances of class.
+
+```java
+public class InstanceVariable {
+	public static String myClassVar = "class variable or static variable";
+
+	public static void main(String[] args) {
+		System.out.println(InstanceVariable.myClassVar);
+		//"class variable or static variable"
+
+		InstanceVariable obj1 = new InstanceVariable();
+		InstanceVariable obj2 = new InstanceVariable();
+		InstanceVariable obj3 = new InstanceVariable();
+
+		System.out.println(obj1.myClassVar);
+		System.out.println(obj2.myClassVar);
+		System.out.println(obj3.myClassVar);
+		//"class variable or static variable"
+		//"class variable or static variable"
+		//"class variable or static variable"
+
+		obj1.myClassVar = "Changed text";
+
+		System.out.println(obj1.myClassVar);
+		System.out.println(obj2.myClassVar);
+		System.out.println(obj3.myClassVar);
+		//"Changed text"
+		//"Changed text"
+		//"Changed text"
+	}
+}
+```
+
+##### Instance Variable
+
+Instance Variables is associated with an instance of a class rather than the
+class itself. So that means the class does not have access to the instance variable
+and changing an instance variable does not affect the instance variable of another
+instance.
+
+```java
+public class InstanceVariable {
+	String myInstanceVar = "Instance variable";
+
+	public static void main(String[] args) {
+		InstanceVariable obj1 = new InstanceVariable();
+		InstanceVariable obj2 = new  InstanceVariable();
+		InstanceVariable obj3 = new InstanceVariable();
+
+		System.out.println(obj1.myInstanceVar);
+		System.out.println(obj2.myInstanceVar);
+		System.out.println(obj3.myInstanceVar);
+		//"Instance variable"
+		//"Instance variable"
+		//"Instance variable"
+
+		obj1.myInstanceVar = "Changed text";
+
+		System.out.println(obj1.myInstanceVar);
+		//"Changed text"
+		System.out.println(obj2.myInstanceVar);
+		//"Instance variable"
+		System.out.println(obj3.myInstanceVar);
+		//"Instance variable"
+	}
+}
+```
+
+##### Local Variable
+
+Local Variable is a variable that is only accessible inside the method.
+
+```java
+public class LocalVariable {
+	public String myVar = "Instance variable";
+
+	public void myMethod() {
+		String myVar = "Inside Method";
+		System.out.println(myVar);
+	}
+
+	public static void main(String[] args) {
+		LocalVariable obj1 = new LocalVariable();
+		System.out.println(obj1.myVar);
+		//"Instance variable"
+		obj1.myMethod();
+		//"Inside Method"
+	}
+}
+```
+
+### Data Types 
+
+Data type defines the a variable can take, for example if a variable has int data 
+type, it can only take integer values. 
+
+![types is javascript an untyped language stack overflow](https://user-images.githubusercontent.com/24445922/46249640-82e3af00-c3fa-11e8-84ef-1a4ccf8a593f.png)
 
 	
 	
