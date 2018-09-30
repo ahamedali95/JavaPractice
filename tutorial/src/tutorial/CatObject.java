@@ -1,23 +1,42 @@
 package tutorial;
 
-public class CatObject {
+class CatObject {
 	
-	int age;
-	String name;
-	String breed;
+	private int age;
+	private String name;
+	private String breed;
 	
 	CatObject(int age, String name, String breed) {
-		this.age = age;
-		this.name = name;
-		this.breed = breed;
+		this.setAge(age);
+		this.setName(name);
+		this.setBreed(breed);
 	}
 	
-	public String makeSound() {
-		return "meow! meow! meow!";
+	public int getAge() {
+		return this.age;
+	}
+	
+	public String getName() {
+		return this.name;
 	}
 
-	public static void main(String[] args) {
-		CatObject myFirstCat = new CatObject(26, "brie", "puppy");
-		System.out.println(myFirstCat.age);
+	protected String getBreed() {
+		return this.breed;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public void setBreed(String breed) {
+		this.breed = breed;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String makeSound() {
+		return "meow! meow! meow!";
 	}
 }
