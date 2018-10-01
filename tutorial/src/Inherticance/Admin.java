@@ -1,6 +1,6 @@
 package Inherticance;
 
-public class Admin extends User {
+class Admin extends User {
 
 	private String uniqueCode;
 	
@@ -18,6 +18,7 @@ public class Admin extends User {
 	}
 
 	//method overriding
+	@Override
 	protected void eat() {
 		super.eat();
 		System.out.println("Admin is eating");
