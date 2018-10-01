@@ -6,7 +6,7 @@ public class User {
 	private String userName;
 	private String password;
 	
-	User(String firstName, String lastName, String userName, String password) {
+	protected User(String firstName, String lastName, String userName, String password) {
 		this.setFirstName(firstName);
 		this.setLastName(lastName);
 		this.setUserName(userName);

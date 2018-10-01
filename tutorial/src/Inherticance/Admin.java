@@ -4,7 +4,7 @@ public class Admin extends User {
 
 	private String uniqueCode;
 	
-	Admin(String firstName, String lastName, String userName, String password, String uniqueCode) {
+	protected Admin(String firstName, String lastName, String userName, String password, String uniqueCode) {
 		super(firstName, lastName, userName, password);
 		this.setUniqueCode(uniqueCode);
 	}
@@ -13,7 +13,7 @@ public class Admin extends User {
 		this.uniqueCode = code;
 	}
 	
-	protected String getUniqueCide() {
+	protected String getUniqueCode() {
 		return this.uniqueCode;
 	}
 
