@@ -1,6 +1,6 @@
 package AbstractClass;
 
-public class Animal {
+abstract public class Animal {
 	private String name;
 	private int age;
 	
@@ -13,15 +13,13 @@ public class Animal {
 		this.age = age;
 	}
 	
-	protected String getName() {
-		return this.name;
-	}
-
 	private void setName(String name) {
 		this.name = name;
 	}
 	
-	protected int getAge() {
-		return this.age;
+	protected abstract void sound();
+	
+	protected void eat() {
+		System.out.println("Animal is eating");
 	}
 }
