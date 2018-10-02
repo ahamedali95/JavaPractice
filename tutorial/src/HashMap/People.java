@@ -1,5 +1,7 @@
 package HashMap;
 
+import java.util.HashMap;
+
 public class People {
 
 	public static void main(String[] args) {
